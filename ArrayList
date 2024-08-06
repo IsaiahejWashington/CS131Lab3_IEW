@@ -1,0 +1,41 @@
+package arraylist;
+
+import java.util.Arrays;
+
+public class ArrayList<T> {
+
+	private final int DEFAULT_SIZE=10;
+   	private int currentItem=0;
+   	private T arList[];
+	
+   	@SuppressWarnings("unchecked")
+	public T ArrayList()
+	{   
+   		                                                            	    	                                      				 		                                                                                         		
+	arList=(T[]) new Object[DEFAULT_SIZE];
+	return null;
+    }//end empty-argument constructor 
+
+  @SuppressWarnings("unchecked")
+    public T ArrayList(int length)
+    {
+	  // arList=new T[length]; //causes a compile error (see above)
+	  arList=(T[]) new Object[length];
+	return null;
+	  
+    }//end preferred constructor
+  
+  	public boolean addItem(T item) {
+  		return true; 
+  	}//end boolean
+
+	@Override
+	public String toString() {
+		return "ArrayList [DEFAULT_SIZE=" + DEFAULT_SIZE + ", currentItem=" + currentItem + ", arList="
+				+ Arrays.toString(arList) + "]";
+	}//end toString
+  	
+  	
+	
+}//end class
+

@@ -1,0 +1,20 @@
+package arraylist;
+
+public class ListApp {
+
+	public static void main(String[] args) {
+		
+		ArrayList ArrayList1 = new ArrayList();
+		System.out.println(ArrayList1);
+		
+		Square Square1 = new Square();
+		System.out.println(Square1);
+		
+		PointThreeD PointThreeD1 = new PointThreeD();
+		System.out.println(PointThreeD1);
+		
+		
+
+	}//end class
+
+}//end main

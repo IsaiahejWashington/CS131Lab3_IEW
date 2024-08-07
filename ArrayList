@@ -8,26 +8,45 @@ public class ArrayList<T> {
    	private int currentItem=0;
    	private T arList[];
 	
+   	
    	@SuppressWarnings("unchecked")
-	public T ArrayList()
+	public ArrayList()
 	{   
-   		                                                            	    	                                      				 		                                                                                         		
+   	                                                            	    	                                      				 		                                                                                         		
 	arList=(T[]) new Object[DEFAULT_SIZE];
-	return null;
+	
+	
     }//end empty-argument constructor 
 
   @SuppressWarnings("unchecked")
-    public T ArrayList(int length)
+    public ArrayList(int length)
     {
-	  // arList=new T[length]; //causes a compile error (see above)
+	  
 	  arList=(T[]) new Object[length];
-	return null;
+	
 	  
     }//end preferred constructor
   
   	public boolean addItem(T item) {
-  		return true; 
+  		if(currentItem>=arList.length) {
+  			return false;
+  		}
+  		arList[currentItem] = item;
+  		currentItem++;
+  		return true;
   	}//end boolean
+  	
+  	//@Override
+  	//public String toString() {
+  		//StringBuilder sb = new StringBuilder("ArrayList");
+  		//for (int i = 0; i < currentItem; i++ );
+  		//int i = 0;
+		//sb.append(arList[i]);
+  		//if(i<currentItem - 1) {
+  			//sb.append(",");
+  		//}
+		//return sb.toString();
+  	//}
 
 	@Override
 	public String toString() {
@@ -38,4 +57,5 @@ public class ArrayList<T> {
   	
 	
 }//end class
+  
 
